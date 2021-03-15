@@ -1,8 +1,10 @@
+import PostContent from '../../components/posts/post-detail/PostContent'
+
 const PostDetailPage = () => {
   return (
-    <div>
-      <h1>Single Post Page</h1>
-    </div>
+    <>
+      <PostContent />
+    </>
   )
 }
 
