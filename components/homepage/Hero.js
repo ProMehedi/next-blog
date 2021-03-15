@@ -13,7 +13,10 @@ const Hero = () => {
         />
       </div>
       <h1>Hi, I'm Mehedi</h1>
-      <p>A fullstack web developer.</p>
+      <p>
+        A fullstack web developer. I blog about web development - specially
+        frontend framework like ReactJS
+      </p>
     </section>
   )
 }
