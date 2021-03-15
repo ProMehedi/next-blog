@@ -11,14 +11,21 @@ const PostItem = ({ post }) => {
     year: 'numeric',
   })
 
+  const linkPath = `/posts/${slug}`
   const imgPath = `/images/posts/${slug}/${image}`
 
   return (
     <li className={styles.post}>
-      <Link href='/posts/single-post'>
+      <Link href={linkPath}>
         <a>
           <div className={styles.image}>
-            <Image src={imgPath} alt={title} width={400} height={330} />
+            <Image
+              src={imgPath}
+              alt={title}
+              width={400}
+              height={330}
+              layout='responsive'
+            />
           </div>
           <div className={styles.content}>
             <h3>{title}</h3>
