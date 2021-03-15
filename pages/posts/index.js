@@ -1,8 +1,10 @@
+import AllPosts from '../../components/posts/AllPosts'
+
 const AllPostsPage = () => {
   return (
-    <div>
-      <h1>All Posts</h1>
-    </div>
+    <>
+      <AllPosts />
+    </>
   )
 }
 
