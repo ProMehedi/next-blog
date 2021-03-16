@@ -15,7 +15,6 @@ export default (req, res) => {
     }
 
     const newMessage = { id: Date.now().toString(), name, email, message }
-    console.log(newMessage)
 
     res
       .status(201)
