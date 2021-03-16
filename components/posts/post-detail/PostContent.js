@@ -2,6 +2,7 @@ import Image from 'next/image'
 import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import Meta from '../../Meta'
 import PostHeader from './PostHeader'
 import styles from './styles/PostContent.module.css'
 
@@ -54,12 +55,18 @@ const PostContent = ({ postContent }) => {
   }
 
   return (
-    <artitle className={styles.content}>
-      <PostHeader title={postContent.title} image={imgPath} />
-      <ReactMarkdown renderers={customRenderers}>
-        {postContent.content}
-      </ReactMarkdown>
-    </artitle>
+    <>
+      <Meta
+        title={`NextBlog - ${postContent.title}`}
+        desc={postContent.excerpt}
+      />
+      <artitle className={styles.content}>
+        <PostHeader title={postContent.title} image={imgPath} />
+        <ReactMarkdown renderers={customRenderers}>
+          {postContent.content}
+        </ReactMarkdown>
+      </artitle>
+    </>
   )
 }
 

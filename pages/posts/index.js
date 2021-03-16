@@ -1,9 +1,11 @@
+import Meta from '../../components/Meta'
 import AllPosts from '../../components/posts/AllPosts'
 import { getAllPosts } from '../../helpers/PostUtil'
 
 const AllPostsPage = ({ posts }) => {
   return (
     <>
+      <Meta title='NextBlog - All Blog Posts' />
       <AllPosts posts={posts} />
     </>
   )

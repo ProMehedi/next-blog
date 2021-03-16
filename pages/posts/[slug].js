@@ -2,11 +2,7 @@ import PostContent from '../../components/posts/post-detail/PostContent'
 import { getPostData, getPostsFiles } from '../../helpers/PostUtil'
 
 const PostDetailPage = ({ postContent }) => {
-  return (
-    <>
-      <PostContent postContent={postContent} />
-    </>
-  )
+  return <PostContent postContent={postContent} />
 }
 
 export const getStaticProps = async (context) => {
