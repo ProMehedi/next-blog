@@ -40,7 +40,6 @@ export const getAllPosts = () => {
 
 export const getFeaturedPosts = () => {
   const allPosts = getAllPosts()
-
   const featuredPosts = allPosts.filter((post) => post.isFeatured)
 
   return featuredPosts
