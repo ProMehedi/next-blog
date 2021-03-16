@@ -21,7 +21,7 @@ const getPostData = (fileName) => {
 }
 
 export const getAllPosts = () => {
-  const postFiles = fs.readdirSync()
+  const postFiles = fs.readdirSync(postDirectory)
 
   const allPosts = postFiles.map((postFile) => {
     return getPostData(postFile)

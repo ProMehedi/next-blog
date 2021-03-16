@@ -1,11 +1,23 @@
 import AllPosts from '../../components/posts/AllPosts'
+import { getAllPosts } from '../../helpers/PostUtil'
 
-const AllPostsPage = () => {
+const AllPostsPage = ({ posts }) => {
   return (
     <>
-      <AllPosts />
+      <AllPosts posts={posts} />
     </>
   )
+}
+
+export const getStaticProps = () => {
+  const posts = getAllPosts()
+
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 100,
+  }
 }
 
 export default AllPostsPage
