@@ -1,6 +1,6 @@
 import FeaturedPosts from '../components/homepage/FeaturedPosts'
 import Hero from '../components/homepage/Hero'
-import { getFeaturedPosts } from '../helpers/PostUtil'
+import { getFeaturedPosts } from '../util/PostUtil'
 
 const HomePage = ({ posts }) => {
   const DUMMY_POSTS = [

@@ -1,5 +1,5 @@
 import PostContent from '../../components/posts/post-detail/PostContent'
-import { getPostData, getPostsFiles } from '../../helpers/PostUtil'
+import { getPostData, getPostsFiles } from '../../util/PostUtil'
 
 const PostDetailPage = ({ postContent }) => {
   return <PostContent postContent={postContent} />
