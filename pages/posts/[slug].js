@@ -1,4 +1,3 @@
-import fs from 'fs'
 import PostContent from '../../components/posts/post-detail/PostContent'
 import { getPostData, getPostsFiles } from '../../util/PostUtil'
 
@@ -7,7 +6,7 @@ const PostDetailPage = ({ postContent }) => {
 }
 
 export const getStaticProps = async (context) => {
-  const { slug } = await context.params
+  const { slug } = context.params
   const postContent = getPostData(slug)
 
   return {

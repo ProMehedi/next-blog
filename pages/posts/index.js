@@ -1,4 +1,3 @@
-import fs from 'fs'
 import Meta from '../../components/Meta'
 import AllPosts from '../../components/posts/AllPosts'
 import { getAllPosts } from '../../util/PostUtil'
