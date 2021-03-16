@@ -26,9 +26,9 @@ const Meta = ({
 }
 
 Meta.defaultProps = {
-  title: "NextBlog - Mehedi's Blog Webstei",
+  title: "NextBlog - Mehedi's Blog Website",
   desc:
-    'Blog about web development (specially frontend framework like ReactJS)',
+    "I'm Mehedi I Blog about web development - specially frontend framework like ReactJS",
   keywords: 'next, reactjs, nextjs',
   language: 'English',
   author: 'Mehedi Hasan',
