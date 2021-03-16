@@ -11,20 +11,17 @@ const ContactPage = () => {
 
     const bodyData = { name, email, message }
 
-    const reqData = await fetch('/api/contact', {
+    await fetch('/api/contact', {
       method: 'POST',
       body: JSON.stringify(bodyData),
       headers: {
         'Content-Type': 'application/json',
       },
     })
-    const resData = await reqData.json()
 
     setName('')
     setEmail('')
     setMessage('')
-
-    console.log(resData)
   }
 
   return (
