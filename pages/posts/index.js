@@ -1,6 +1,6 @@
 import Meta from '../../components/Meta'
 import AllPosts from '../../components/posts/AllPosts'
-import { getAllPosts } from '../../helpers/PostUtil'
+import { getAllPosts } from '../../util/PostUtil'
 
 const AllPostsPage = ({ posts }) => {
   return (
