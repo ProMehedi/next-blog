@@ -11,7 +11,7 @@ const AllPostsPage = ({ posts }) => {
   )
 }
 
-export const getStaticProps = () => {
+export const getStaticProps = async () => {
   const posts = getAllPosts()
 
   return {

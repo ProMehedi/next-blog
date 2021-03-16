@@ -11,7 +11,7 @@ const HomePage = ({ posts }) => {
   )
 }
 
-export const getStaticProps = () => {
+export const getStaticProps = async () => {
   const featuredPosts = getFeaturedPosts()
 
   return {

@@ -6,7 +6,7 @@ const PostDetailPage = ({ postContent }) => {
 }
 
 export const getStaticProps = async (context) => {
-  const { slug } = context.params
+  const { slug } = await context.params
   const postContent = getPostData(slug)
 
   return {
