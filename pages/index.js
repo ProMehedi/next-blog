@@ -1,6 +1,6 @@
 import FeaturedPosts from '../components/homepage/FeaturedPosts'
 import Hero from '../components/homepage/Hero'
-import { getAllPosts } from '../util/PostUtil'
+import { getFeaturedPosts } from '../util/PostUtil'
 
 const HomePage = ({ posts }) => {
   return (
@@ -12,8 +12,7 @@ const HomePage = ({ posts }) => {
 }
 
 export const getStaticProps = () => {
-  const allPosts = getAllPosts()
-  const featuredPosts = allPosts.filter((post) => post.isFeatured)
+  const featuredPosts = getFeaturedPosts()
 
   return {
     props: {
