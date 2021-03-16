@@ -1,3 +1,4 @@
+import fs from 'fs'
 import PostContent from '../../components/posts/post-detail/PostContent'
 import { getPostData, getPostsFiles } from '../../util/PostUtil'
 
