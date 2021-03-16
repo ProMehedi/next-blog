@@ -20,9 +20,7 @@ export default async (req, res) => {
     let client
 
     try {
-      client = await MongoClient.connect(
-        'mongodb+srv://mehedi:Mehedi2020@cluster0.wrrej.mongodb.net/nextBlog?authSource=admin&replicaSet=atlas-2kzvot-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true'
-      )
+      client = await MongoClient.connect(process.env.mongoUrl)
       console.log('MongoDB Connected!')
     } catch (error) {
       res.status(500).json({
