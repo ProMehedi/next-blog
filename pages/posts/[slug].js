@@ -1,5 +1,5 @@
 import PostContent from '../../components/posts/post-detail/PostContent'
-import { getPostData } from '../../helpers/PostUtil'
+import { getPostData, getPostsFiles } from '../../helpers/PostUtil'
 
 const PostDetailPage = ({ postContent }) => {
   return (
@@ -22,11 +22,15 @@ export const getStaticProps = async (context) => {
 }
 
 export const getStaticPaths = async () => {
-  // const paths = [{params: {slug: }}]
+  const postFileNames = getPostsFiles()
+
+  const slugs = postFileNames.map((fileName) => fileName.replace(/\.md$/, '')) // This the file extension
+
+  const paths = slugs.map((slug) => ({ params: { slug } }))
 
   return {
-    paths: [],
-    fallback: 'blocking',
+    paths: paths,
+    fallback: false,
   }
 }
 
